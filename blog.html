@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions - Blog</title>
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🚀 TechNova Solutions</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                    <li><a href="clima.html">Clima</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><button id="logoutBtn" class="btn-logout">Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-section">
+            <div class="blog-header">
+                <h2>📰 Blog TechNova</h2>
+                <p>Descubre las últimas tendencias, noticias y artículos sobre tecnología e innovación.</p>
+            </div>
+
+            <!-- Barra de búsqueda y filtros -->
+            <div class="blog-tools">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar artículos..." onkeyup="filterBlogs()">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterByCategory('todos')">Todos</button>
+                    <button class="filter-btn" onclick="filterByCategory('tecnologia')">💻 Tecnología</button>
+                    <button class="filter-btn" onclick="filterByCategory('innovacion')">🚀 Innovación</button>
+                    <button class="filter-btn" onclick="filterByCategory('negocios')">📊 Negocios</button>
+                    <button class="filter-btn" onclick="filterByCategory('seguridad')">🔒 Seguridad</button>
+                </div>
+            </div>
+
+            <!-- Grid de artículos del blog -->
+            <div class="blog-grid" id="blogGrid">
+                <!-- Artículo 1 -->
+                <article class="blog-card" data-category="tecnologia">
+                    <div class="blog-image">
+                        <img src="img/IA.jpg" alt="Inteligencia Artificial">
+                        <span class="blog-category">💻 Tecnología</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>El Futuro de la Inteligencia Artificial en 2026</h3>
+                        <p>Descubre cómo la IA está transformando industrias enteras y qué esperar en los próximos años.</p>
+                        <div class="blog-meta">
+                            <span class="date">📅 15 Agosto 2026</span>
+                            <span class="author">✍️ Equipo TechNova</span>
+                        </div>
+                        <a href="#" class="btn-read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2 -->
+                <article class="blog-card" data-category="innovacion">
+                    <div class="blog-image">
+                        <img src="img/INNOVACION.jpg" alt="Innovación Digital">
+                        <span class="blog-category">🚀 Innovación</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Transformación Digital: Claves para el Éxito</h3>
+                        <p>Estrategias efectivas para llevar tu negocio al siguiente nivel en la era digital.</p>
+                        <div class="blog-meta">
+                            <span class="date">📅 12 Agosto 2026</span>
+                            <span class="author">✍️ Equipo TechNova</span>
+                        </div>
+                        <a href="#" class="btn-read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3 -->
+                <article class="blog-card" data-category="seguridad">
+                    <div class="blog-image">
+                        <img src="img/SEGURIDAD.jpg" alt="Ciberseguridad">
+                        <span class="blog-category">🔒 Seguridad</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Protege tu Negocio: Mejores Prácticas de Ciberseguridad</h3>
+                        <p>Consejos esenciales para mantener tus datos y sistemas seguros ante amenazas digitales.</p>
+                        <div class="blog-meta">
+                            <span class="date">📅 10 Agosto 2026</span>
+                            <span class="author">✍️ Equipo TechNova</span>
+                        </div>
+                        <a href="#" class="btn-read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 4 -->
+                <article class="blog-card" data-category="negocios">
+                    <div class="blog-image">
+                        <img src="IMG/NEGOCIOS.jpg" alt="Negocios Digitales">
+                        <span class="blog-category">📊 Negocios</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Marketing Digital: Estrategias que Funcionan en 2026</h3>
+                        <p>Las tácticas más efectivas para posicionar tu marca y aumentar tus ventas online.</p>
+                        <div class="blog-meta">
+                            <span class="date">📅 8 Agosto 2026</span>
+                            <span class="author">✍️ Equipo TechNova</span>
+                        </div>
+                        <a href="#" class="btn-read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 5 -->
+                <article class="blog-card" data-category="tecnologia">
+                    <div class="blog-image">
+                        <img src="IMG/CLOUD.jpg" alt="Cloud Computing">
+                        <span class="blog-category">💻 Tecnología</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Cloud Computing: El Futuro del Almacenamiento</h3>
+                        <p>Todo lo que necesitas saber sobre la nube y cómo puede beneficiar a tu empresa.</p>
+                        <div class="blog-meta">
+                            <span class="date">📅 5 Agosto 2026</span>
+                            <span class="author">✍️ Equipo TechNova</span>
+                        </div>
+                        <a href="#" class="btn-read-more">Leer más →</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 6 -->
+                <article class="blog-card" data-category="innovacion">
+                    <div class="blog-image">
+                        <img src="IMG/STARTUPS.jpg" alt="Startups">
+                        <span class="blog-category">🚀 Innovación</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Cómo Crear una Startup Exitosa en 2026</h3>
+                        <p>Guía paso a paso para emprender y hacer crecer tu proyecto desde cero.</p>
+                        <div class="blog-meta">
+                            <span class="date">📅 3 Agosto 2026</span>
+                            <span class="author">✍️ Equipo TechNova</span>
+                        </div>
+                        <a href="#" class="btn-read-more">Leer más →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Botón Regresar al Inicio -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn-back-home">🏠 Regresar al Inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TechNova Solutions - Todos los derechos reservados</p>
+            <p>Creado por: yare_ph y mary_vc</p>
+        </div>
+    </footer>
+
+    <script src="js/blog.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
