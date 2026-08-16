@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions - Clima</title>
+    <link rel="stylesheet" href="css/clima.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🚀 TechNova Solutions</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                    <li><a href="clima.html" class="active">Clima</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><button id="logoutBtn" class="btn-logout">Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="api-section">
+            <h2>🌤️ Información del Clima</h2>
+            
+            <!-- Botón de regresar -->
+            <div class="back-button-container">
+                <a href="index.html" class="btn-back">⬅️ Regresar al Inicio</a>
+            </div>
+            
+            <!-- Buscador de ciudad -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="ciudadInput" placeholder="Ingresa una ciudad..." value="Ciudad de México">
+                    <button onclick="buscarClima()" class="btn-search">🔍 Buscar</button>
+                </div>
+                <p class="search-hint">Ejemplos: Madrid, Londres, Nueva York, Tokio</p>
+            </div>
+
+            <!-- Tarjeta del clima -->
+            <div class="weather-container">
+                <div class="weather-card" id="weatherCard">
+                    <div class="weather-header">
+                        <span class="weather-icon" id="climaIcono">☀️</span>
+                        <h3 class="city-name" id="climaCiudad">Ciudad de México</h3>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="temperature" id="climaTemp">🌡️ 22°C</div>
+                        <div class="description" id="climaDesc">Cielo despejado</div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">💧</span>
+                            <span class="detail-label">Humedad</span>
+                            <span class="detail-value" id="climaHumedad">45%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">💨</span>
+                            <span class="detail-label">Viento</span>
+                            <span class="detail-value" id="climaViento">10 km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🌡️</span>
+                            <span class="detail-label">Sensación</span>
+                            <span class="detail-value" id="climaSensacion">22°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TechNova Solutions - Todos los derechos reservados</p>
+            <p>Creado por: yare_ph y mary_vc</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/clima.js"></script>
+</body>
+</html>

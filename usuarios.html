@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions - Usuarios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/usuarios.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🚀 TechNova Solutions</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="usuarios.html" class="active">Usuarios</a></li>
+                    <li><a href="clima.html">Clima</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><button id="logoutBtn" class="btn-logout">Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="api-section">
+            <h2>👥 Lista de Usuarios</h2>
+            <div class="api-info">
+                <span class="api-badge">📡 API: JSONPlaceholder</span>
+                <p style="margin-top: 10px; color: #666;">Consumiendo datos de usuarios en tiempo real</p>
+            </div>
+            <div id="usersContainer" class="users-grid">
+                <!-- Los usuarios se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TechNova Solutions - Todos los derechos reservados</p>
+            <p>Creado por: yare_ph y mary_vc</p>
+        </div>
+    </footer>
+
+    <script src="js/usuarios.js"></script>
+</body>
+</html>

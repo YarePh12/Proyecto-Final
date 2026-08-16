@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions - Contacto</title>
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>🚀 TechNova Solutions</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="usuarios.html">Usuarios</a></li>
+                    <li><a href="clima.html">Clima</a></li>
+                    <li><a href="soporte.html">Soporte</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><button id="logoutBtn" class="btn-logout">Cerrar Sesión</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-header">
+                <h2>📞 Contáctanos</h2>
+                <p>Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Formulario de Contacto -->
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo <span class="required">*</span></label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 55 1234 5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto <span class="required">*</span></label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="proyecto">Nuevo proyecto</option>
+                                <option value="cotizacion">Solicitar cotización</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje <span class="required">*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu mensaje aquí..." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">Acepto los <a href="#" onclick="alert('Términos y condiciones de TechNova Solutions')">términos y condiciones</a> <span class="required">*</span></label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Enviar Mensaje ✉️</button>
+                    </form>
+
+                    <!-- Botón Regresar al Inicio -->
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="index.html" class="btn-back-home">🏠 Regresar al Inicio</a>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>📍 Dirección</h3>
+                        <p>Av. Tecnología 123, Col. Innovación</p>
+                        <p>CDMX, México, CP 01234</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📧 Correo Electrónico</h3>
+                        <p>contacto@technovasolutions.com</p>
+                        <p>soporte@technovasolutions.com</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>📱 Teléfono</h3>
+                        <p>+52 (55) 1234 5678</p>
+                        <p>+52 (55) 8765 4321</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🕐 Horario de Atención</h3>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábado: 10:00 - 14:00</p>
+                        <p>Domingo: Cerrado</p>
+                    </div>
+
+                    <div class="info-card social-links">
+                        <h3>🌐 Redes Sociales</h3>
+                        <div class="social-icons">
+                            <a href="#" onclick="alert('Facebook - TechNova Solutions')" title="Facebook">📘</a>
+                            <a href="#" onclick="alert('Twitter - @TechNovaSol')" title="Twitter">🐦</a>
+                            <a href="#" onclick="alert('LinkedIn - TechNova Solutions')" title="LinkedIn">💼</a>
+                            <a href="#" onclick="alert('Instagram - @technovasolutions')" title="Instagram">📸</a>
+                            <a href="#" onclick="alert('YouTube - TechNova Solutions')" title="YouTube">▶️</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TechNova Solutions - Todos los derechos reservados</p>
+            <p>Creado por: yare_ph y mary_vc</p>
+        </div>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
